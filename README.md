@@ -4,7 +4,7 @@
 
 ## Project Screenshots here:
 
-![screenshot](screenshots.png)
+![screenshot](screenshot.png)
 
 ## Built With
 
