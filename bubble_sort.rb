@@ -4,16 +4,16 @@ def  bubble_sort(arr)
   debug = 0
   while !is_sorted
     is_sorted = true
-
-    (0...length_to_sort).each do |n|
+    n = 0
+    until n == length_to_sort
       if arr[n] > arr[n+1]
         arr[n], arr[n+1] = arr[n+1], arr[n]   #swap the contents of two indexes
         is_sorted = false
       end
       puts "iteration_#{n}: #{arr}"
+      n += 1
     end
-    # debug += 1
-    # puts "iteration_#{debug}: #{arr}"
+    length_to_sort -= 1
   end
   return arr
 end
