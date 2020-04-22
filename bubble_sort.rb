@@ -1,11 +1,11 @@
 def  bubble_sort(arr)
-  yield(arr)
+  yield(arr) if block_given?
   return arr
 end
 
-unsorted = [4,7,0,10,1]
+unsorted_arr = [4,7,0,10,1]
 
-sorted = bubble_sort(unsorted) do |arr|
+sorted = bubble_sort(unsorted_arr) do |arr|
   is_sorted = false
   length_to_sort = arr.length-1
   debug = 0
