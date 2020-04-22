@@ -2,7 +2,7 @@
 
 > This project implements a bubble sort algorithm in Ruby. An unsorted array is passed to the bubble sort method with a Ruby block. The bubble sort method then passes execution to a block using the yield keyword, but only if a block was passed. A sorted array (in ascending order) is returned.
 
->The project's requirements can be found here: ["Newsweek" Website](http://newsweek.com/)
+> The project's requirements can be found here: [PROJECT: BUBBLE SORT](https://www.theodinproject.com/courses/ruby-programming/lessons/bubble-sort)
 
 ## Project Screenshots here:
 
