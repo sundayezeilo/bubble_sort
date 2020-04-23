@@ -3,9 +3,7 @@ def bubble_sort(arr)
   1.upto(arr.length - 1) do
     n = 0
     until n >= length_to_sort
-      sort_order = yield(arr[n], arr[n + 1]) if block_given?
-      arr[n], arr[n + 1] = arr[n + 1], arr[n] if sort_order.positive?
-      # arr[n], arr[n + 1] = arr[n + 1], arr[n] if arr[n] > arr[n + 1]
+      arr[n], arr[n + 1] = arr[n + 1], arr[n] if arr[n] > arr[n + 1]
       n += 1
     end
     length_to_sort -= 1 # for Array sort optimization. Number of iteration reduces as sorting increases.
@@ -30,10 +28,7 @@ end
 # Implementation
 
 num_arr = [4, 7, 0, 10, 1]
-result = bubble_sort(num_arr) { |a, b| a <=> b }
-puts result.to_s
-
-# puts bubble_sort(num_arr).to_s
+puts bubble_sort(num_arr).to_s
 
 str_arr = %w[hello hi Ken Mayor Welcome!]
 sorted_str = bubble_sort_by(str_arr) { |x, y| x.length <=> y.length }
