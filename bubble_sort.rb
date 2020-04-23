@@ -17,12 +17,7 @@ def bubble_sort_by(arr)
     n = 0
     until n >= length_to_sort
       sort_order = yield(arr[n], arr[n + 1])
-      if sort_order.positive?
-        # arr[n], arr[n + 1] = arr[n + 1], arr[n]
-        copy = arr[n]
-        arr[n] = arr[n + 1]
-        arr[n + 1] = copy
-      end
+      arr[n], arr[n + 1] = arr[n + 1], arr[n] if sort_order.positive?
       n += 1
     end
     length_to_sort -= 1 # for Array sort optimization. Number of iteration reduces as sorting increases.
